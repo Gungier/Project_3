@@ -1,0 +1,55 @@
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Rubik Mono One', sans-serif;
+    color: aquamarine;
+    font-size: 24px;
+}
+
+.headshot {
+    
+    margin:50px;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+   margin-left: 300px;
+   
+    
+}
+
+
+
+hr {
+     display: block;
+      height: 1px;
+    border: 0;
+     border-top: 1px solid aquamarine;
+    margin: 1em 0; 
+    padding: 0;
+    width: 900px;
+    margin: 0 auto;
+}
+
+a {
+    color: aquamarine;
+}
+
+
+.bio {
+    text-align: left;
+}
+
+.ron, 
+.gabe, 
+.nicole,
+.russel,
+.dan {
+    text-align: left;
+   padding: 50px;
+}
+
+.row {
+    margin-left: -20px;
+}

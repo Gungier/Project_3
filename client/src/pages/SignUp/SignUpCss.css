@@ -1,0 +1,45 @@
+.modal-content {
+    background-color : black;
+  
+    border-radius: 50px;
+ 
+    
+}
+
+#orangeForm-name,
+#orangeForm-email,
+#orangeForm-pass {
+    color: aquamarine;
+    background-color: black;
+ 
+}
+
+.modal-header {
+    background-color: black;
+    color: white;
+}
+
+#signUpSubmit {
+    color: black;
+    border-radius: 25px;
+   background-color: #ff0dbf;
+    
+}
+
+.close {
+    color: white;
+
+}
+
+.close:hover {
+    color: aquamarine;
+}
+
+
+h4{ 
+    color: aquamarine;
+}
+
+button {
+    background-color: aquamarine
+}
