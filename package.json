@@ -9,22 +9,18 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build",
+    "heroku-postbuild": "npm run build"
   },
-    "engines": {
-      "node": "10.x",
-      "npm": "6.x"
-    },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gungier/Project_3.git"
+    "url": "git+https://github.com/ronseide/ProjectThree.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gungier/Project_3/issues"
+    "url": "https://github.com/ronseide/ProjectThree/issues"
   },
-  "homepage": "https://github.com/gungier/Project_3#readme",
+  "homepage": "https://github.com/ronseide/ProjectThree#readme",
   "dependencies": {
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
@@ -36,5 +32,7 @@
     "nodemon": "^1.19.1",
     "sequelize": "^5.8.12"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "dotenv": "^8.0.0"
+  }
 }
