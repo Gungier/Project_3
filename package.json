@@ -9,18 +9,22 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
   },
+    "engines": {
+      "node": "10.x",
+      "npm": "6.x"
+    },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ronseide/ProjectThree.git"
+    "url": "git+https://github.com/gungier/Project_3.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ronseide/ProjectThree/issues"
+    "url": "https://github.com/gungier/Project_3/issues"
   },
-  "homepage": "https://github.com/ronseide/ProjectThree#readme",
+  "homepage": "https://github.com/gungier/Project_3#readme",
   "dependencies": {
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
