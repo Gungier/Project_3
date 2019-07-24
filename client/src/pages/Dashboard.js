@@ -24,7 +24,7 @@ class Dashboard extends React.Component {
   handleX() { }
   handleClick = (e) => {
     axios
-      .post("http://localhost:3001/currencies/currency",
+      .post("/currencies/currency",
         {
           currency_name: this.state.currency_name,
           user_id: this.props.user.user_id,
@@ -48,7 +48,7 @@ class Dashboard extends React.Component {
   getCurrencies = () => {
     let promises = [];
     axios
-      .get(`http://localhost:3001/currencies/currency/${this.state.user_id}`)
+      .get(`currencies/currency/${this.state.user_id}`)
       .then((res) => {
         let currency_names = res.data;
         currency_names.forEach(function (singleElement) {
@@ -98,7 +98,7 @@ class Dashboard extends React.Component {
 
   handleX = () => {
     axios
-    .delete("http://localhost:3001/currencies/currency/delete",
+    .delete("/currencies/currency/delete",
         {
             user_id: this.props.user.user_id,
             currency_name: this.props.currency_name,

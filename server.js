@@ -6,7 +6,8 @@ var path = require("path")
 var PORT = process.env.PORT || 3001
 // var db = require("./models")
 
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV !== "production") {
+    require('dotenv').config() 
     app.use(express.static("client/build"));
 }
 
