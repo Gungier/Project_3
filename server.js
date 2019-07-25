@@ -4,7 +4,7 @@ var bodyParser = require("body-parser")
 var app = express()
 var path = require("path")
 var PORT = process.env.PORT || 3001
-var db = require("./models")
+// var db = require("./models")
 
 // Serve up static assets
 if (process.env.NODE_ENV === "production") {
@@ -38,11 +38,10 @@ else {
   });
 }
 
-db.sequelize.sync({
-  force: false }).then(function () {
+// db.sequelize.sync({
+//   force: false }).then(function () {
     
-  app.listen(process.env.PORT || 3001, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-});
+  app.listen(PORT, function () {
+    console.log("App listening on PORT " + PORT);
+  });
 
-});
