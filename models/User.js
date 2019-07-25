@@ -1,38 +1,34 @@
-const bcrypt = require("bcrypt-nodejs");
-module.exports = function (sequelize, DataTypes) {
-    var User = sequelize.define("User", {
-        username: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            unique: true
-        },
-        email: {
-            type: DataTypes.STRING,
-            unique: true,
-            validate: {
-                isEmail: true
-            }
-        },
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
+const Sequelize = require("sequelize")
+const db = require("../database/db")
 
-    });
-
-    User.associate = function (models) {
-        User.hasMany(models.Currency, {
-           onDelete: "cascade"
-        });
-    };
-
-    User.beforeCreate((user, options) => {
-        const salt = bcrypt.genSaltSync();
-        user.password = bcrypt.hashSync(user.password, salt);
-    });
-    User.prototype.validPassword = function (password) {
-        return bcrypt.compareSync(password, this.password);
-    };
-
-    return User;
-};
+module.exports = db.sequelize.define(
+   "user",
+   {
+       id: {
+           type: Sequelize.INTEGER,
+           primaryKey: true,
+           autoIncrement: true
+       },
+       first_name: {
+           type: Sequelize.STRING
+       },
+       last_name: {
+           type: Sequelize.STRING
+       },
+       email: {
+           type: Sequelize.STRING
+       },
+       password: {
+           type: Sequelize.STRING
+       },
+       created_at: {
+           type: Sequelize.DATE,
+           defaultValue: Sequelize.NOW
+       }
+   },
+{
+   timestamps: false
+});
+{
+    return user; 
+}

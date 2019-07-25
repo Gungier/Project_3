@@ -1,39 +1,33 @@
 "use strict"
-//  const Sequelize = require("sequelize")
-//  const db = require("../database/db")
+ const Sequelize = require("sequelize")
+ const db = require("../database/db")
 
-module.exports = function (sequelize, DataTypes) {
-    var Currency = sequelize.define("Currency", {
+ module.exports = db.sequelize.define(
+    "currency",
+   {
        id: {
-           type: DataTypes.INTEGER,
+           type: Sequelize.INTEGER,
            primaryKey: true,
            autoIncrement: true
        },
        currency_name: {
-           type: DataTypes.STRING
+           type: Sequelize.STRING
        },
        user_id: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
        },
        updated_at: {
-        type: DataTypes.DATE,
-        defaultValue: DataTypes.NOW
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.NOW
        },
        created_at: {
-           type: DataTypes.DATE,
-           defaultValue: DataTypes.NOW
+           type: Sequelize.DATE,
+           defaultValue: Sequelize.NOW
        }
    },
 {
    timestamps: false
-})
-Currency.associate = function (models) {
-    Currency.belongsTo(models.User, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
-
-  return Currency;
-};
+});
+{
+    return currency;
+}
