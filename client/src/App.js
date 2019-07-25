@@ -32,6 +32,7 @@ class App extends Component {
     <Route exact path="/About" component={About}/>
     <Route exact path="/Dashboard" component={() => this.state.user ? <Dashboard user={this.state.user}/> : <Home />}/>
     <Route exact path="/SignUp" component={SignUp}/>
+    <Route exact path="/Login" component={Login}/>
   
     </Switch>
 

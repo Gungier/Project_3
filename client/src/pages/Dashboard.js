@@ -48,7 +48,7 @@ class Dashboard extends React.Component {
   getCurrencies = () => {
     let promises = [];
     axios
-      .get(`currencies/currency/${this.state.user_id}`)
+      .get(`/currencies/currency/${this.state.user_id}`)
       .then((res) => {
         let currency_names = res.data;
         currency_names.forEach(function (singleElement) {
