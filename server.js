@@ -4,7 +4,7 @@ var bodyParser = require("body-parser")
 var app = express()
 var path = require("path")
 var PORT = process.env.PORT || 3001
-// var db = require("./models")
+var db = require("./models")
 
 // Serve up static assets
 if (process.env.NODE_ENV === "production") {
@@ -26,7 +26,7 @@ app.use("/currencies", Currencies)
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
-  app.get("/*", function(req, res) {
+  app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "./client/build/index.html"));
   });
 }
@@ -38,10 +38,10 @@ else {
   });
 }
 
-// db.sequelize.sync({
-//   force: false }).then(function () {
+db.sequelize.sync({
+  force: false }).then(function () {
     
   app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
   });
-
+  });
