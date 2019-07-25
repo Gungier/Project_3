@@ -17,7 +17,7 @@ class SignUp extends React.Component {
     console.log(this.state.email);
     console.log(this.state.password);
     axios
-      .post("/users/register", 
+      .post("http://localhost:3001/users/register", 
     {first_name: this.state.firstName,
        last_name: this.state.lastName,
         email: this.state.email,
